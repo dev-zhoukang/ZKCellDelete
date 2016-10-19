@@ -1,14 +1,14 @@
 //
-//  ZKTopHintView.h
+//  ZKTopIndicator.h
 //  ZKCellDeleteAnimation
 //
 //  Created by ZK on 16/10/19.
 //  Copyright © 2016年 ZK. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-@interface ZKTopHintView : UIWindow
+@interface ZKTopIndicator : NSObject
 
 + (void)showWithTitle:(NSString *)title dismissTime:(NSTimeInterval)time;
 

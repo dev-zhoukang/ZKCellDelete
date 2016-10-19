@@ -10,7 +10,7 @@
 
 #import "ZKCollectionViewController.h"
 #import "ZKCollectionViewCell.h"
-#import "ZKTopHintView.h"
+#import "ZKTopIndicator.h"
 
 @interface ZKCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -78,6 +78,8 @@ static NSString *const kCellIdentify = @"ZKCollectionViewCell";
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    [ZKTopIndicator showWithTitle:@"长按显示删除按钮\n单击两次交换两者位置" dismissTime:3];
 }
 
 #pragma mark - <UICollectionViewDelegate, UICollectionViewDataSource>
