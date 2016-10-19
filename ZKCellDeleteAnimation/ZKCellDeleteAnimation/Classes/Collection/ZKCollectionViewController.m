@@ -10,6 +10,7 @@
 
 #import "ZKCollectionViewController.h"
 #import "ZKCollectionViewCell.h"
+#import "ZKTopHintView.h"
 
 @interface ZKCollectionViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -18,6 +19,10 @@
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong) UIView *bottomView;
+
+// 新功能
+
+@property (nonatomic, strong) NSIndexPath *seletedIndexPath;
 
 @end
 
@@ -70,6 +75,11 @@ static NSString *const kCellIdentify = @"ZKCollectionViewCell";
     [btn addTarget:self action:@selector(finishEdit) forControlEvents:UIControlEventTouchUpInside];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+}
+
 #pragma mark - <UICollectionViewDelegate, UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -85,8 +95,60 @@ static NSString *const kCellIdentify = @"ZKCollectionViewCell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ZKCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentify forIndexPath:indexPath];
+    cell.borderView.hidden = ![indexPath isEqual: self.seletedIndexPath];
     [cell updateCelWithTitle:_dataSource[indexPath.item] baseVC:self];
     return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([_seletedIndexPath isEqual:indexPath]) {
+        _seletedIndexPath = nil;
+        [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+        return;
+    }
+    if (!_seletedIndexPath) {
+        _seletedIndexPath = indexPath;
+        [collectionView reloadItemsAtIndexPaths:@[indexPath]];
+    }
+    else {
+        [self exchangeItemIdex:indexPath];
+    }
+}
+
+#pragma mark - Private
+
+- (void)exchangeItemIdex:(NSIndexPath *)indexPath
+{
+    NSMutableArray *temp = [[NSMutableArray alloc] init];
+    [temp addObjectsFromArray:_dataSource];
+    
+    NSMutableArray *orignalSection = temp;
+    
+    if (_collectionView.numberOfSections == 1) { // 单组
+        [orignalSection exchangeObjectAtIndex:indexPath.item withObjectAtIndex:_seletedIndexPath.item];
+    }
+    else { // 多组
+        NSUInteger countPerSection = [_collectionView numberOfItemsInSection:0];
+        
+        [orignalSection exchangeObjectAtIndex:indexPath.section*countPerSection+indexPath.item withObjectAtIndex:_seletedIndexPath.section*countPerSection+_seletedIndexPath.item];
+    }
+    _dataSource = temp.copy;
+    
+    // 执行交换动画
+    [_collectionView performBatchUpdates:^{
+        
+        _collectionView.userInteractionEnabled = NO;
+        
+        [_collectionView moveItemAtIndexPath:self.seletedIndexPath toIndexPath:indexPath];
+        [_collectionView moveItemAtIndexPath:indexPath toIndexPath:self.seletedIndexPath];
+        
+    } completion:^(BOOL finished) {
+        
+        self.seletedIndexPath = nil;
+        [_collectionView reloadItemsAtIndexPaths:@[indexPath]];
+        _collectionView.userInteractionEnabled = YES;
+    }];
 }
 
 #pragma mark - Public
@@ -94,7 +156,6 @@ static NSString *const kCellIdentify = @"ZKCollectionViewCell";
 - (void)beginEdit
 {
     _isEditing = YES;
-    
     NSArray *visibleCells = [_collectionView visibleCells];
     [visibleCells makeObjectsPerformSelector:NSSelectorFromString(@"startEditSwitchAnimation")];
     

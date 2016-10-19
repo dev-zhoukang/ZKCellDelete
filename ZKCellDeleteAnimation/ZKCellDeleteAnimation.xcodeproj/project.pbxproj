@@ -21,6 +21,7 @@
 		583BEE3F1DB73A2E0094FAC5 /* ZKCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583BEE3B1DB73A2E0094FAC5 /* ZKCollectionViewController.xib */; };
 		583BEE481DB74AAB0094FAC5 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE451DB74AAB0094FAC5 /* UIView+AutoLayout.m */; };
 		583BEE491DB74AAB0094FAC5 /* UIView+ZKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */; };
+		583BEE4E1DB778710094FAC5 /* ZKTopHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE4D1DB778710094FAC5 /* ZKTopHintView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKCommon.m"; sourceTree = "<group>"; };
 		583BEE4A1DB74CA10094FAC5 /* MacroToolHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroToolHeader.h; sourceTree = "<group>"; };
 		583BEE4B1DB75F5A0094FAC5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		583BEE4C1DB778710094FAC5 /* ZKTopHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKTopHintView.h; sourceTree = "<group>"; };
+		583BEE4D1DB778710094FAC5 /* ZKTopHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKTopHintView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +193,8 @@
 				583BEE451DB74AAB0094FAC5 /* UIView+AutoLayout.m */,
 				583BEE461DB74AAB0094FAC5 /* UIView+ZKCommon.h */,
 				583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */,
+				583BEE4C1DB778710094FAC5 /* ZKTopHintView.h */,
+				583BEE4D1DB778710094FAC5 /* ZKTopHintView.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				583BEE4E1DB778710094FAC5 /* ZKTopHintView.m in Sources */,
 				583BEDF71DB737EE0094FAC5 /* AppDelegate.m in Sources */,
 				583BEE3C1DB73A2E0094FAC5 /* ZKCollectionViewCell.m in Sources */,
 				583BEDF41DB737EE0094FAC5 /* main.m in Sources */,

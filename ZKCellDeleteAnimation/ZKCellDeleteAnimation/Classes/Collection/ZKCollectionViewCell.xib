@@ -29,13 +29,20 @@
                                 <color key="textColor" red="0.92435024348053685" green="0.33817072964966438" blue="0.2744337248322139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dn8-aV-yLa">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3OH-4B-dPw" firstAttribute="centerX" secondItem="SRS-Ru-4lf" secondAttribute="centerX" id="9VL-Zw-uZO"/>
                             <constraint firstItem="3OH-4B-dPw" firstAttribute="top" secondItem="SRS-Ru-4lf" secondAttribute="top" constant="65" id="Ht7-5s-nbf"/>
                             <constraint firstItem="KXf-6n-BSY" firstAttribute="leading" secondItem="SRS-Ru-4lf" secondAttribute="leading" id="K5p-Dc-6fm"/>
+                            <constraint firstAttribute="bottom" secondItem="dn8-aV-yLa" secondAttribute="bottom" id="KYg-aX-qXJ"/>
                             <constraint firstItem="KXf-6n-BSY" firstAttribute="top" secondItem="SRS-Ru-4lf" secondAttribute="top" id="VRJ-RV-22S"/>
+                            <constraint firstAttribute="trailing" secondItem="dn8-aV-yLa" secondAttribute="trailing" id="Zd2-c3-axL"/>
+                            <constraint firstItem="dn8-aV-yLa" firstAttribute="top" secondItem="SRS-Ru-4lf" secondAttribute="top" id="aWk-bF-OOq"/>
+                            <constraint firstItem="dn8-aV-yLa" firstAttribute="leading" secondItem="SRS-Ru-4lf" secondAttribute="leading" id="ehW-c8-duY"/>
                             <constraint firstAttribute="trailing" secondItem="KXf-6n-BSY" secondAttribute="trailing" id="hxS-ak-4uh"/>
                             <constraint firstAttribute="bottom" secondItem="KXf-6n-BSY" secondAttribute="bottom" id="sR2-0r-jeH"/>
                         </constraints>
@@ -72,6 +79,7 @@
             <size key="customSize" width="169" height="170"/>
             <connections>
                 <outlet property="bgView" destination="SRS-Ru-4lf" id="bSc-GC-0fl"/>
+                <outlet property="borderView" destination="dn8-aV-yLa" id="Af0-vf-3zU"/>
                 <outlet property="deleteBtn" destination="fwk-W4-Asf" id="Eof-aN-5K1"/>
                 <outlet property="imageView" destination="KXf-6n-BSY" id="X8b-Pc-zgj"/>
                 <outlet property="titleLabel" destination="3OH-4B-dPw" id="5zc-aZ-HSm"/>

@@ -10,9 +10,9 @@
 
 @class ZKCollectionViewController;
 
-#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
-
 @interface ZKCollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) IBOutlet UIView *borderView;
 
 - (void)updateCelWithTitle:(NSString *)title baseVC:(ZKCollectionViewController *)baseVC;
 

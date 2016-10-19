@@ -32,11 +32,19 @@
 {
     [super awakeFromNib];
     
-    _topConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
-    _bottomConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10*WindowZoomScale];
-    _leftConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
-    _rightConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:10*WindowZoomScale];
+    _borderView.layer.borderColor = [UIColor yellowColor].CGColor;
+    _borderView.layer.borderWidth = 1.8f;
     
+    [self setupBgViewConstraint];
+    
+    [self setupDeleteBtnAnchorPoint];
+    
+    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+    [_imageView addGestureRecognizer:longPress];
+}
+
+- (void)setupDeleteBtnAnchorPoint
+{
     NSLayoutConstraint *leftConstraint = [_deleteBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
     NSLayoutConstraint *topConstraint = [_deleteBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
     
@@ -47,9 +55,14 @@
     _deleteBtn.contentEdgeInsets = UIEdgeInsetsMake(10*WindowZoomScale-imageWH/2.0, 0, 0, 15*WindowZoomScale-imageWH/2.0);
     CGPoint anchorPoint = CGPointMake((_deleteBtn.width-insetValue)/_deleteBtn.width, 0);
     [_deleteBtn setAnchorPointMotionlessly:anchorPoint xConstraint:leftConstraint yConstraint:topConstraint];
-    
-    UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-    [_imageView addGestureRecognizer:longPress];
+}
+
+- (void)setupBgViewConstraint
+{
+    _topConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
+    _bottomConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeBottom withInset:10*WindowZoomScale];
+    _leftConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
+    _rightConstraint = [_bgView autoPinEdgeToSuperviewEdge:ALEdgeTrailing withInset:10*WindowZoomScale];
 }
 
 #pragma mark - Actions
