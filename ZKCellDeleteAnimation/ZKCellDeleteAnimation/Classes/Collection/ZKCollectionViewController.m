@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @property (nonatomic, strong) NSMutableArray *dataSource;
+@property (nonatomic, strong) UIView *bottomView;
 
 @end
 
@@ -53,6 +54,20 @@ static NSString *const kCellIdentify = @"ZKCollectionViewCell";
     _collectionView.contentInset = UIEdgeInsetsMake(64.f+10.f, 10.f, 0, 0);
     
     [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([ZKCollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:kCellIdentify];
+    
+    _bottomView = [[UIView alloc] init];
+    _bottomView.backgroundColor = [UIColor brownColor];
+    [self.view addSubview:_bottomView];
+    _bottomView.size = (CGSize){SCREEN_WIDTH, 44.f};
+    _bottomView.top = SCREEN_HEIGHT;
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeSystem];
+    [_bottomView addSubview:btn];
+    btn.frame = _bottomView.bounds;
+    [btn setTitle:@"退出编辑" forState:UIControlStateNormal];
+    [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont boldSystemFontOfSize:14.f];
+    [btn addTarget:self action:@selector(finishEdit) forControlEvents:UIControlEventTouchUpInside];
 }
 
 #pragma mark - <UICollectionViewDelegate, UICollectionViewDataSource>
@@ -82,6 +97,22 @@ static NSString *const kCellIdentify = @"ZKCollectionViewCell";
     
     NSArray *visibleCells = [_collectionView visibleCells];
     [visibleCells makeObjectsPerformSelector:NSSelectorFromString(@"startEditSwitchAnimation")];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.bottomView.bottom = SCREEN_HEIGHT;
+    }];
+}
+
+- (void)finishEdit
+{
+    _isEditing = NO;
+    
+    NSArray *visibleCells = [_collectionView visibleCells];
+    [visibleCells makeObjectsPerformSelector:NSSelectorFromString(@"startEditSwitchAnimation")];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.bottomView.top = SCREEN_HEIGHT;
+    }];
 }
 
 @end

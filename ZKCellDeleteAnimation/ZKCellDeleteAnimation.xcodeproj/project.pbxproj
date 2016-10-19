@@ -68,6 +68,7 @@
 		583BEE461DB74AAB0094FAC5 /* UIView+ZKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKCommon.h"; sourceTree = "<group>"; };
 		583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKCommon.m"; sourceTree = "<group>"; };
 		583BEE4A1DB74CA10094FAC5 /* MacroToolHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroToolHeader.h; sourceTree = "<group>"; };
+		583BEE4B1DB75F5A0094FAC5 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +134,7 @@
 				583BEE001DB737EE0094FAC5 /* LaunchScreen.storyboard */,
 				583BEE031DB737EE0094FAC5 /* Info.plist */,
 				583BEDF31DB737EE0094FAC5 /* main.m */,
+				583BEE4B1DB75F5A0094FAC5 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -413,6 +415,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ZKCellDeleteAnimation/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -458,6 +461,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "$(PROJECT_DIR)/ZKCellDeleteAnimation/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -564,6 +568,7 @@
 				583BEE1E1DB737EF0094FAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		583BEE1F1DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimationTests" */ = {
 			isa = XCConfigurationList;
@@ -572,6 +577,7 @@
 				583BEE211DB737EF0094FAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		583BEE221DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimationUITests" */ = {
 			isa = XCConfigurationList;
@@ -580,6 +586,7 @@
 				583BEE241DB737EF0094FAC5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

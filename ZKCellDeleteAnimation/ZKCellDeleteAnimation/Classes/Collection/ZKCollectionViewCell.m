@@ -7,9 +7,6 @@
 //
 
 #import "ZKCollectionViewCell.h"
-#import "UIView+AutoLayout.h"
-#import "UIView+ZKCommon.h"
-#import "MacroToolHeader.h"
 #import "ZKCollectionViewController.h"
 
 @interface ZKCollectionViewCell () {
@@ -43,9 +40,12 @@
     NSLayoutConstraint *leftConstraint = [_deleteBtn autoPinEdgeToSuperviewEdge:ALEdgeLeading withInset:0];
     NSLayoutConstraint *topConstraint = [_deleteBtn autoPinEdgeToSuperviewEdge:ALEdgeTop withInset:0];
     
-    CGFloat insetValue = 10;
-    _deleteBtn.contentEdgeInsets = UIEdgeInsetsMake(10*WindowZoomScale-19/2.0, 0, 0, 15*WindowZoomScale-19/2.0);
-    CGPoint anchorPoint = CGPointMake((_deleteBtn.width-insetValue)/_deleteBtn.width,0);
+    CGFloat insetValue = 10*WindowZoomScale;
+    CGFloat imageWH = 19.f;
+    
+    [_deleteBtn layoutIfNeeded];
+    _deleteBtn.contentEdgeInsets = UIEdgeInsetsMake(10*WindowZoomScale-imageWH/2.0, 0, 0, 15*WindowZoomScale-imageWH/2.0);
+    CGPoint anchorPoint = CGPointMake((_deleteBtn.width-insetValue)/_deleteBtn.width, 0);
     [_deleteBtn setAnchorPointMotionlessly:anchorPoint xConstraint:leftConstraint yConstraint:topConstraint];
     
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
@@ -84,9 +84,9 @@
     }
     else {
         lastTransform = CGAffineTransformMakeScale(0.001, 0.001);
-        _deleteBtn.hidden = YES;
+        _deleteBtn.hidden = NO;
     }
-    
+
     [UIView animateWithDuration:0.25 animations:^{
         _deleteBtn.transform = lastTransform;
         [self layoutIfNeeded];
@@ -95,12 +95,8 @@
 
 - (void)updateViewsLayout
 {
-    NSLog(@" === %zd == %@", [_baseViewController isEditing], _baseViewController);
-    
     if ([_baseViewController isEditing]) {
-        
         _deleteBtn.hidden = NO;
-        
         _topConstraint.constant = 10*WindowZoomScale;
         _bottomConstraint.constant = 10*WindowZoomScale;
         _leftConstraint.constant = 5*WindowZoomScale;
@@ -108,7 +104,6 @@
     }
     else {
         _deleteBtn.hidden = YES;
-        
         _topConstraint.constant = 0;
         _bottomConstraint.constant = 10*WindowZoomScale;
         _leftConstraint.constant = 0;
