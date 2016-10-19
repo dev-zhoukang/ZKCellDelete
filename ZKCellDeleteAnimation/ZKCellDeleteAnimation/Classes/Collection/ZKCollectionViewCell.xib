@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ZKCollectionViewCell" id="gTV-IL-0wX" customClass="ZKCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="169" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="169" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRS-Ru-4lf" userLabel="Content View">
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KXf-6n-BSY">
+                                <color key="backgroundColor" red="0.72941176470000002" green="0.57647058819999997" blue="0.31764705879999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="标题" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OH-4B-dPw" userLabel="Title Label">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="PXt-9f-Rdt"/>
+                                    <constraint firstAttribute="height" constant="30" id="V1I-Za-xa6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.92435024348053685" green="0.33817072964966438" blue="0.2744337248322139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3OH-4B-dPw" firstAttribute="centerX" secondItem="SRS-Ru-4lf" secondAttribute="centerX" id="9VL-Zw-uZO"/>
+                            <constraint firstItem="3OH-4B-dPw" firstAttribute="top" secondItem="SRS-Ru-4lf" secondAttribute="top" constant="65" id="Ht7-5s-nbf"/>
+                            <constraint firstItem="KXf-6n-BSY" firstAttribute="leading" secondItem="SRS-Ru-4lf" secondAttribute="leading" id="K5p-Dc-6fm"/>
+                            <constraint firstItem="KXf-6n-BSY" firstAttribute="top" secondItem="SRS-Ru-4lf" secondAttribute="top" id="VRJ-RV-22S"/>
+                            <constraint firstAttribute="trailing" secondItem="KXf-6n-BSY" secondAttribute="trailing" id="hxS-ak-4uh"/>
+                            <constraint firstAttribute="bottom" secondItem="KXf-6n-BSY" secondAttribute="bottom" id="sR2-0r-jeH"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3e-W9-aLM">
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="VnL-dE-pTt"/>
+                            <constraint firstAttribute="height" constant="40" id="zxY-X6-GON"/>
+                        </constraints>
+                        <state key="normal" image="home_delete_event"/>
+                    </button>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="SRS-Ru-4lf" secondAttribute="trailing" constant="10" id="6Bc-cx-6lC"/>
+                <constraint firstAttribute="bottom" secondItem="SRS-Ru-4lf" secondAttribute="bottom" constant="10" id="As3-Xv-alF"/>
+                <constraint firstItem="m3e-W9-aLM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="WGa-kZ-xNW"/>
+                <constraint firstItem="SRS-Ru-4lf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gaj-so-6Su"/>
+                <constraint firstAttribute="trailing" secondItem="m3e-W9-aLM" secondAttribute="trailing" id="osp-w5-T3F"/>
+                <constraint firstItem="SRS-Ru-4lf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="pnK-B7-CUf"/>
+            </constraints>
+            <size key="customSize" width="169" height="170"/>
+            <connections>
+                <outlet property="bgView" destination="SRS-Ru-4lf" id="bSc-GC-0fl"/>
+                <outlet property="deleteBtn" destination="m3e-W9-aLM" id="tep-7O-Vy5"/>
+                <outlet property="imageView" destination="KXf-6n-BSY" id="X8b-Pc-zgj"/>
+                <outlet property="titleLabel" destination="3OH-4B-dPw" id="5zc-aZ-HSm"/>
+            </connections>
+            <point key="canvasLocation" x="-22.5" y="-120"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="home_delete_event" width="19" height="19"/>
+    </resources>
+</document>

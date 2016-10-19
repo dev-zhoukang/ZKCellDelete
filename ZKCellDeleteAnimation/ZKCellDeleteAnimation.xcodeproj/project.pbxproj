@@ -1,0 +1,587 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		583BEDF41DB737EE0094FAC5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEDF31DB737EE0094FAC5 /* main.m */; };
+		583BEDF71DB737EE0094FAC5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEDF61DB737EE0094FAC5 /* AppDelegate.m */; };
+		583BEDFF1DB737EE0094FAC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 583BEDFE1DB737EE0094FAC5 /* Assets.xcassets */; };
+		583BEE021DB737EE0094FAC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 583BEE001DB737EE0094FAC5 /* LaunchScreen.storyboard */; };
+		583BEE0D1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE0C1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.m */; };
+		583BEE181DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE171DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.m */; };
+		583BEE291DB738470094FAC5 /* ZKMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE271DB738470094FAC5 /* ZKMainViewController.m */; };
+		583BEE2A1DB738470094FAC5 /* ZKMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583BEE281DB738470094FAC5 /* ZKMainViewController.xib */; };
+		583BEE3C1DB73A2E0094FAC5 /* ZKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE371DB73A2E0094FAC5 /* ZKCollectionViewCell.m */; };
+		583BEE3D1DB73A2E0094FAC5 /* ZKCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583BEE381DB73A2E0094FAC5 /* ZKCollectionViewCell.xib */; };
+		583BEE3E1DB73A2E0094FAC5 /* ZKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE3A1DB73A2E0094FAC5 /* ZKCollectionViewController.m */; };
+		583BEE3F1DB73A2E0094FAC5 /* ZKCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 583BEE3B1DB73A2E0094FAC5 /* ZKCollectionViewController.xib */; };
+		583BEE481DB74AAB0094FAC5 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE451DB74AAB0094FAC5 /* UIView+AutoLayout.m */; };
+		583BEE491DB74AAB0094FAC5 /* UIView+ZKCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		583BEE091DB737EF0094FAC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 583BEDE71DB737EE0094FAC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 583BEDEE1DB737EE0094FAC5;
+			remoteInfo = ZKCellDeleteAnimation;
+		};
+		583BEE141DB737EF0094FAC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 583BEDE71DB737EE0094FAC5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 583BEDEE1DB737EE0094FAC5;
+			remoteInfo = ZKCellDeleteAnimation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		583BEDEF1DB737EE0094FAC5 /* ZKCellDeleteAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZKCellDeleteAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		583BEDF31DB737EE0094FAC5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		583BEDF51DB737EE0094FAC5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		583BEDF61DB737EE0094FAC5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		583BEDFE1DB737EE0094FAC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		583BEE011DB737EE0094FAC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		583BEE031DB737EE0094FAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583BEE081DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZKCellDeleteAnimationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		583BEE0C1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKCellDeleteAnimationTests.m; sourceTree = "<group>"; };
+		583BEE0E1DB737EF0094FAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583BEE131DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZKCellDeleteAnimationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		583BEE171DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZKCellDeleteAnimationUITests.m; sourceTree = "<group>"; };
+		583BEE191DB737EF0094FAC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		583BEE261DB738470094FAC5 /* ZKMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKMainViewController.h; sourceTree = "<group>"; };
+		583BEE271DB738470094FAC5 /* ZKMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKMainViewController.m; sourceTree = "<group>"; };
+		583BEE281DB738470094FAC5 /* ZKMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKMainViewController.xib; sourceTree = "<group>"; };
+		583BEE361DB73A2E0094FAC5 /* ZKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCollectionViewCell.h; sourceTree = "<group>"; };
+		583BEE371DB73A2E0094FAC5 /* ZKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCollectionViewCell.m; sourceTree = "<group>"; };
+		583BEE381DB73A2E0094FAC5 /* ZKCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKCollectionViewCell.xib; sourceTree = "<group>"; };
+		583BEE391DB73A2E0094FAC5 /* ZKCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZKCollectionViewController.h; sourceTree = "<group>"; };
+		583BEE3A1DB73A2E0094FAC5 /* ZKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZKCollectionViewController.m; sourceTree = "<group>"; };
+		583BEE3B1DB73A2E0094FAC5 /* ZKCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZKCollectionViewController.xib; sourceTree = "<group>"; };
+		583BEE441DB74AAB0094FAC5 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		583BEE451DB74AAB0094FAC5 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		583BEE461DB74AAB0094FAC5 /* UIView+ZKCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZKCommon.h"; sourceTree = "<group>"; };
+		583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZKCommon.m"; sourceTree = "<group>"; };
+		583BEE4A1DB74CA10094FAC5 /* MacroToolHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacroToolHeader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		583BEDEC1DB737EE0094FAC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583BEE051DB737EF0094FAC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583BEE101DB737EF0094FAC5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		583BEDE61DB737EE0094FAC5 = {
+			isa = PBXGroup;
+			children = (
+				583BEDF11DB737EE0094FAC5 /* ZKCellDeleteAnimation */,
+				583BEE0B1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests */,
+				583BEE161DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests */,
+				583BEDF01DB737EE0094FAC5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		583BEDF01DB737EE0094FAC5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				583BEDEF1DB737EE0094FAC5 /* ZKCellDeleteAnimation.app */,
+				583BEE081DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.xctest */,
+				583BEE131DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		583BEDF11DB737EE0094FAC5 /* ZKCellDeleteAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				583BEDF51DB737EE0094FAC5 /* AppDelegate.h */,
+				583BEDF61DB737EE0094FAC5 /* AppDelegate.m */,
+				583BEE251DB738360094FAC5 /* Classes */,
+				583BEDF21DB737EE0094FAC5 /* Supporting Files */,
+			);
+			path = ZKCellDeleteAnimation;
+			sourceTree = "<group>";
+		};
+		583BEDF21DB737EE0094FAC5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				583BEDFE1DB737EE0094FAC5 /* Assets.xcassets */,
+				583BEE001DB737EE0094FAC5 /* LaunchScreen.storyboard */,
+				583BEE031DB737EE0094FAC5 /* Info.plist */,
+				583BEDF31DB737EE0094FAC5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		583BEE0B1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests */ = {
+			isa = PBXGroup;
+			children = (
+				583BEE0C1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.m */,
+				583BEE0E1DB737EF0094FAC5 /* Info.plist */,
+			);
+			path = ZKCellDeleteAnimationTests;
+			sourceTree = "<group>";
+		};
+		583BEE161DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests */ = {
+			isa = PBXGroup;
+			children = (
+				583BEE171DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.m */,
+				583BEE191DB737EF0094FAC5 /* Info.plist */,
+			);
+			path = ZKCellDeleteAnimationUITests;
+			sourceTree = "<group>";
+		};
+		583BEE251DB738360094FAC5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				583BEE261DB738470094FAC5 /* ZKMainViewController.h */,
+				583BEE271DB738470094FAC5 /* ZKMainViewController.m */,
+				583BEE281DB738470094FAC5 /* ZKMainViewController.xib */,
+				583BEE351DB73A140094FAC5 /* Collection */,
+				583BEE401DB749390094FAC5 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		583BEE351DB73A140094FAC5 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				583BEE391DB73A2E0094FAC5 /* ZKCollectionViewController.h */,
+				583BEE3A1DB73A2E0094FAC5 /* ZKCollectionViewController.m */,
+				583BEE3B1DB73A2E0094FAC5 /* ZKCollectionViewController.xib */,
+				583BEE361DB73A2E0094FAC5 /* ZKCollectionViewCell.h */,
+				583BEE371DB73A2E0094FAC5 /* ZKCollectionViewCell.m */,
+				583BEE381DB73A2E0094FAC5 /* ZKCollectionViewCell.xib */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		583BEE401DB749390094FAC5 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				583BEE4A1DB74CA10094FAC5 /* MacroToolHeader.h */,
+				583BEE441DB74AAB0094FAC5 /* UIView+AutoLayout.h */,
+				583BEE451DB74AAB0094FAC5 /* UIView+AutoLayout.m */,
+				583BEE461DB74AAB0094FAC5 /* UIView+ZKCommon.h */,
+				583BEE471DB74AAB0094FAC5 /* UIView+ZKCommon.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		583BEDEE1DB737EE0094FAC5 /* ZKCellDeleteAnimation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 583BEE1C1DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimation" */;
+			buildPhases = (
+				583BEDEB1DB737EE0094FAC5 /* Sources */,
+				583BEDEC1DB737EE0094FAC5 /* Frameworks */,
+				583BEDED1DB737EE0094FAC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZKCellDeleteAnimation;
+			productName = ZKCellDeleteAnimation;
+			productReference = 583BEDEF1DB737EE0094FAC5 /* ZKCellDeleteAnimation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		583BEE071DB737EF0094FAC5 /* ZKCellDeleteAnimationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 583BEE1F1DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimationTests" */;
+			buildPhases = (
+				583BEE041DB737EF0094FAC5 /* Sources */,
+				583BEE051DB737EF0094FAC5 /* Frameworks */,
+				583BEE061DB737EF0094FAC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				583BEE0A1DB737EF0094FAC5 /* PBXTargetDependency */,
+			);
+			name = ZKCellDeleteAnimationTests;
+			productName = ZKCellDeleteAnimationTests;
+			productReference = 583BEE081DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		583BEE121DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 583BEE221DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimationUITests" */;
+			buildPhases = (
+				583BEE0F1DB737EF0094FAC5 /* Sources */,
+				583BEE101DB737EF0094FAC5 /* Frameworks */,
+				583BEE111DB737EF0094FAC5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				583BEE151DB737EF0094FAC5 /* PBXTargetDependency */,
+			);
+			name = ZKCellDeleteAnimationUITests;
+			productName = ZKCellDeleteAnimationUITests;
+			productReference = 583BEE131DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		583BEDE71DB737EE0094FAC5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = ZK;
+				TargetAttributes = {
+					583BEDEE1DB737EE0094FAC5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9S49W485R2;
+						ProvisioningStyle = Automatic;
+					};
+					583BEE071DB737EF0094FAC5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9S49W485R2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 583BEDEE1DB737EE0094FAC5;
+					};
+					583BEE121DB737EF0094FAC5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9S49W485R2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 583BEDEE1DB737EE0094FAC5;
+					};
+				};
+			};
+			buildConfigurationList = 583BEDEA1DB737EE0094FAC5 /* Build configuration list for PBXProject "ZKCellDeleteAnimation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 583BEDE61DB737EE0094FAC5;
+			productRefGroup = 583BEDF01DB737EE0094FAC5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				583BEDEE1DB737EE0094FAC5 /* ZKCellDeleteAnimation */,
+				583BEE071DB737EF0094FAC5 /* ZKCellDeleteAnimationTests */,
+				583BEE121DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		583BEDED1DB737EE0094FAC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583BEE021DB737EE0094FAC5 /* LaunchScreen.storyboard in Resources */,
+				583BEE3D1DB73A2E0094FAC5 /* ZKCollectionViewCell.xib in Resources */,
+				583BEDFF1DB737EE0094FAC5 /* Assets.xcassets in Resources */,
+				583BEE3F1DB73A2E0094FAC5 /* ZKCollectionViewController.xib in Resources */,
+				583BEE2A1DB738470094FAC5 /* ZKMainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583BEE061DB737EF0094FAC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583BEE111DB737EF0094FAC5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		583BEDEB1DB737EE0094FAC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583BEDF71DB737EE0094FAC5 /* AppDelegate.m in Sources */,
+				583BEE3C1DB73A2E0094FAC5 /* ZKCollectionViewCell.m in Sources */,
+				583BEDF41DB737EE0094FAC5 /* main.m in Sources */,
+				583BEE3E1DB73A2E0094FAC5 /* ZKCollectionViewController.m in Sources */,
+				583BEE481DB74AAB0094FAC5 /* UIView+AutoLayout.m in Sources */,
+				583BEE491DB74AAB0094FAC5 /* UIView+ZKCommon.m in Sources */,
+				583BEE291DB738470094FAC5 /* ZKMainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583BEE041DB737EF0094FAC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583BEE0D1DB737EF0094FAC5 /* ZKCellDeleteAnimationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		583BEE0F1DB737EF0094FAC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				583BEE181DB737EF0094FAC5 /* ZKCellDeleteAnimationUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		583BEE0A1DB737EF0094FAC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 583BEDEE1DB737EE0094FAC5 /* ZKCellDeleteAnimation */;
+			targetProxy = 583BEE091DB737EF0094FAC5 /* PBXContainerItemProxy */;
+		};
+		583BEE151DB737EF0094FAC5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 583BEDEE1DB737EE0094FAC5 /* ZKCellDeleteAnimation */;
+			targetProxy = 583BEE141DB737EF0094FAC5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		583BEE001DB737EE0094FAC5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				583BEE011DB737EE0094FAC5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		583BEE1A1DB737EF0094FAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		583BEE1B1DB737EF0094FAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		583BEE1D1DB737EF0094FAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9S49W485R2;
+				INFOPLIST_FILE = ZKCellDeleteAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.ZKCellDeleteAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		583BEE1E1DB737EF0094FAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9S49W485R2;
+				INFOPLIST_FILE = ZKCellDeleteAnimation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.ZKCellDeleteAnimation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		583BEE201DB737EF0094FAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9S49W485R2;
+				INFOPLIST_FILE = ZKCellDeleteAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.ZKCellDeleteAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZKCellDeleteAnimation.app/ZKCellDeleteAnimation";
+			};
+			name = Debug;
+		};
+		583BEE211DB737EF0094FAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9S49W485R2;
+				INFOPLIST_FILE = ZKCellDeleteAnimationTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.ZKCellDeleteAnimationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZKCellDeleteAnimation.app/ZKCellDeleteAnimation";
+			};
+			name = Release;
+		};
+		583BEE231DB737EF0094FAC5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9S49W485R2;
+				INFOPLIST_FILE = ZKCellDeleteAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.ZKCellDeleteAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZKCellDeleteAnimation;
+			};
+			name = Debug;
+		};
+		583BEE241DB737EF0094FAC5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 9S49W485R2;
+				INFOPLIST_FILE = ZKCellDeleteAnimationUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.zk.ZKCellDeleteAnimationUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZKCellDeleteAnimation;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		583BEDEA1DB737EE0094FAC5 /* Build configuration list for PBXProject "ZKCellDeleteAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583BEE1A1DB737EF0094FAC5 /* Debug */,
+				583BEE1B1DB737EF0094FAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		583BEE1C1DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583BEE1D1DB737EF0094FAC5 /* Debug */,
+				583BEE1E1DB737EF0094FAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		583BEE1F1DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583BEE201DB737EF0094FAC5 /* Debug */,
+				583BEE211DB737EF0094FAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		583BEE221DB737EF0094FAC5 /* Build configuration list for PBXNativeTarget "ZKCellDeleteAnimationUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				583BEE231DB737EF0094FAC5 /* Debug */,
+				583BEE241DB737EF0094FAC5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 583BEDE71DB737EE0094FAC5 /* Project object */;
+}
