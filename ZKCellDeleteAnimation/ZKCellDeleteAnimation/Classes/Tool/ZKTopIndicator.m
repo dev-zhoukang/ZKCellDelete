@@ -43,14 +43,27 @@ NSTimer *timer_;
 
 + (void)setupUIWithTitle:(NSString *)title
 {
+    // 窗口
     window_ = [[UIWindow alloc] init];
     window_.backgroundColor = [UIColor orangeColor];
     [window_ setWindowLevel:UIWindowLevelStatusBar];
     window_.size = (CGSize){SCREEN_WIDTH, SCREEN_HEIGHT};
     window_.top = 0;
     
+    // 阴影
+    UIView *bottomLine = [[UIView alloc] init];
+    [window_ addSubview:bottomLine];
+    bottomLine.backgroundColor = [UIColor blackColor];
+    bottomLine.size = (CGSize){SCREEN_WIDTH, 1.f};
+    bottomLine.bottom = window_.height;
+    bottomLine.layer.shadowOffset = (CGSize){2.f, 2.f};
+    bottomLine.layer.shadowOpacity = 1;
+    bottomLine.layer.shadowRadius = 4.f;
+    
+    // 文本标签
     UILabel *label = [[UILabel alloc] init];
     [window_ addSubview:label];
+    label.backgroundColor = window_.backgroundColor;
     label.numberOfLines = 0;
     label.textAlignment = NSTextAlignmentCenter;
     label.size = (CGSize){window_.width, 100.f};
@@ -69,6 +82,7 @@ NSTimer *timer_;
     
     label.attributedText = attributedString;
     
+    // 手势
     UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePan:)];
     [window_ addGestureRecognizer:panGesture];
 }
